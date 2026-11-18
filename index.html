@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta name="description" content="Nostixel Android privacy policy.">
+    <title>Nostixel Privacy Policy — Publication Draft</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --midnight: #171A2A;
+        --surface: #20243A;
+        --surface-raised: #292D45;
+        --violet: #A78BFA;
+        --teal: #5EEAD4;
+        --gold: #FFBF69;
+        --ink: #F3F1FC;
+        --muted: #C3C0D4;
+        --line: #444861;
+        --measure: 72rem;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 1.5rem;
+      }
+
+      body {
+        min-width: 20rem;
+        margin: 0;
+        background: var(--midnight);
+        color: var(--ink);
+        font-family: "Segoe UI", "Avenir Next", Avenir, system-ui, sans-serif;
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+
+      a {
+        color: var(--teal);
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.2em;
+      }
+
+      a:hover {
+        color: var(--ink);
+      }
+
+      a:focus-visible {
+        border-radius: 0.15rem;
+        outline: 0.18rem solid var(--gold);
+        outline-offset: 0.2rem;
+      }
+
+      .skip-link {
+        position: absolute;
+        top: 0.75rem;
+        left: 0.75rem;
+        z-index: 1;
+        padding: 0.6rem 0.8rem;
+        transform: translateY(-180%);
+        background: var(--teal);
+        color: var(--midnight);
+        font-weight: 700;
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+
+      .site-header {
+        border-top: 0.35rem solid transparent;
+        border-image: linear-gradient(
+          90deg,
+          var(--violet) 0 42%,
+          var(--teal) 42% 76%,
+          var(--gold) 76%
+        ) 1;
+        border-bottom: 1px solid var(--line);
+        background:
+          linear-gradient(115deg, rgba(167, 139, 250, 0.1), transparent 55%),
+          var(--midnight);
+      }
+
+      .header-inner,
+      .page-layout {
+        width: min(100% - 2.5rem, var(--measure));
+        margin-inline: auto;
+      }
+
+      .header-inner {
+        padding-block: clamp(2.5rem, 8vw, 5rem) 2.75rem;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1.75rem;
+        color: var(--muted);
+        font-size: 0.92rem;
+        font-weight: 650;
+      }
+
+      .brand-mark {
+        display: inline-grid;
+        width: 1.8rem;
+        height: 1.8rem;
+        place-items: center;
+        border: 1px solid var(--violet);
+        color: var(--violet);
+        font-size: 0.8rem;
+        font-weight: 800;
+        line-height: 1;
+      }
+
+      h1,
+      h2 {
+        font-family: "Segoe UI", "Avenir Next", Avenir, system-ui, sans-serif;
+        letter-spacing: -0.035em;
+      }
+
+      h1 {
+        max-width: 12ch;
+        margin: 0;
+        color: var(--ink);
+        font-size: clamp(2.5rem, 7vw, 4.5rem);
+        font-weight: 720;
+        line-height: 1.05;
+      }
+
+      .header-note {
+        max-width: 60ch;
+        margin: 1.25rem 0 0;
+        color: var(--muted);
+      }
+
+      .draft-note {
+        display: inline-block;
+        margin-top: 1.4rem;
+        padding: 0.45rem 0.7rem;
+        border-left: 0.2rem solid var(--gold);
+        background: rgba(255, 191, 105, 0.08);
+        color: var(--gold);
+        font-size: 0.92rem;
+      }
+
+      .page-layout {
+        display: grid;
+        grid-template-columns: minmax(13rem, 17rem) minmax(0, 1fr);
+        align-items: start;
+        gap: clamp(2rem, 5vw, 4rem);
+        padding-block: 2rem 5rem;
+      }
+
+      .contents {
+        position: sticky;
+        top: 1.25rem;
+        padding: 1.2rem;
+        border: 1px solid var(--line);
+        background: var(--surface);
+      }
+
+      .contents h2 {
+        margin: 0 0 0.75rem;
+        color: var(--violet);
+        font-size: 1rem;
+        letter-spacing: 0;
+      }
+
+      .contents ol {
+        display: grid;
+        gap: 0.25rem;
+        margin: 0;
+        padding-left: 1.25rem;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .contents a {
+        color: var(--muted);
+        text-decoration: none;
+      }
+
+      .contents a:hover {
+        color: var(--teal);
+        text-decoration: underline;
+      }
+
+      main {
+        min-width: 0;
+      }
+
+      .policy-meta {
+        margin: 0 0 2.5rem;
+        padding: 1rem 1.2rem;
+        border-left: 0.2rem solid var(--violet);
+        background: var(--surface);
+      }
+
+      .policy-meta dl {
+        display: grid;
+        grid-template-columns: minmax(8rem, 10rem) minmax(0, 1fr);
+        gap: 0.55rem 1rem;
+        margin: 0;
+      }
+
+      .policy-meta dt {
+        color: var(--muted);
+      }
+
+      .policy-meta dd {
+        min-width: 0;
+        margin: 0;
+        overflow-wrap: anywhere;
+      }
+
+      .section {
+        padding-block: 1.6rem;
+        border-top: 1px solid var(--line);
+        scroll-margin-top: 1rem;
+      }
+
+      .section h2 {
+        margin: 0 0 0.85rem;
+        color: var(--violet);
+        font-size: clamp(1.35rem, 3vw, 1.7rem);
+        font-weight: 680;
+        line-height: 1.25;
+      }
+
+      .section p {
+        max-width: 72ch;
+        margin: 0.75rem 0;
+        color: var(--muted);
+      }
+
+      .section ul {
+        margin: 0.75rem 0;
+        padding-left: 1.4rem;
+        color: var(--muted);
+      }
+
+      .section li {
+        padding-left: 0.25rem;
+        margin-block: 0.35rem;
+      }
+
+      .section li::marker {
+        color: var(--teal);
+      }
+
+      .unresolved {
+        padding: 1rem 1.1rem;
+        border-left: 0.2rem solid var(--gold);
+        background: rgba(255, 191, 105, 0.08);
+        color: var(--gold) !important;
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+      }
+
+      .footer-inner {
+        width: min(100% - 2.5rem, var(--measure));
+        margin-inline: auto;
+        padding-block: 1.25rem 2rem;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 54rem) {
+        .page-layout {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 1.5rem;
+        }
+
+        .contents {
+          position: static;
+        }
+
+        .contents ol {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          column-gap: 1.25rem;
+        }
+      }
+
+      @media (max-width: 34rem) {
+        .header-inner,
+        .page-layout,
+        .footer-inner {
+          width: min(100% - 1.5rem, var(--measure));
+        }
+
+        .contents ol {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .policy-meta dl {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 0.1rem;
+        }
+
+        .policy-meta dd {
+          margin-bottom: 0.7rem;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+
+      @media print {
+        :root {
+          color-scheme: light;
+          --ink: #171A2A;
+          --muted: #303246;
+          --line: #B8B8C2;
+        }
+
+        body {
+          background: #fff;
+          color: var(--ink);
+        }
+
+        .site-header,
+        .contents,
+        .site-footer {
+          background: #fff;
+        }
+
+        .page-layout {
+          display: block;
+        }
+
+        .contents {
+          position: static;
+          margin-bottom: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to privacy policy</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span>Nostixel / Android</span>
+        </div>
+        <h1>Privacy Policy</h1>
+        <p class="header-note">
+          How Nostixel handles game files and related information on your
+          device.
+        </p>
+        <p class="draft-note">Draft — complete the bracketed fields before publication.</p>
+      </div>
+    </header>
+
+    <div class="page-layout">
+      <nav class="contents" aria-label="Privacy policy sections">
+        <h2>On this page</h2>
+        <ol>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#scope">Scope</a></li>
+          <li><a href="#accessed-stored">Information accessed and stored</a></li>
+          <li><a href="#device-storage">Information stored on the device</a></li>
+          <li><a href="#rom-files">ROM files and imported content</a></li>
+          <li><a href="#saves">Save files and save states</a></li>
+          <li><a href="#diagnostics">Device and diagnostic information</a></li>
+          <li><a href="#network">Internet and network communication</a></li>
+          <li><a href="#backup">Android device backup and transfer</a></li>
+          <li><a href="#third-parties">Third-party libraries and services</a></li>
+          <li><a href="#sharing">Data sharing</a></li>
+          <li><a href="#retention">Retention and deletion</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#children">Children's privacy</a></li>
+          <li><a href="#rights">User rights and privacy questions</a></li>
+          <li><a href="#changes">Changes to this policy</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ol>
+      </nav>
+
+      <main id="main-content">
+        <section class="policy-meta" aria-label="Publisher and policy details">
+          <dl>
+            <dt>Effective date</dt>
+            <dd>November 18, 2026</dd>
+            <dt>Publisher</dt>
+            <dd>Sergrudolf Arago</dd>
+            <dt>Privacy contact</dt>
+            <dd><a href="mailto:sergrudolfarago@gmail.com">sergrudolfarago@gmail.com</a></dd>
+            <dt>Public policy URL</dt>
+            <dd>https://github.com/rowletbestboy/nostixel-privacy</dd>
+          </dl>
+        </section>
+
+        <section class="section" id="introduction">
+          <h2>1. Introduction</h2>
+          <p>
+            This policy describes how Sergrudolf Arago handles information in
+            the Nostixel Android application (&quot;Nostixel&quot;). Nostixel is
+            an emulator that lets users select game files and play them
+            locally. This draft reflects the audited application behavior as
+            of the effective date above.
+          </p>
+        </section>
+
+        <section class="section" id="scope">
+          <h2>2. Scope</h2>
+          <p>
+            This policy applies to the Nostixel Android app. It does not govern
+            the independent privacy practices of Android, Google Drive, a
+            document provider, or a service a user chooses in Android&apos;s
+            system file picker.
+          </p>
+        </section>
+
+        <section class="section" id="accessed-stored">
+          <h2>3. Information Nostixel accesses and stores</h2>
+          <p>
+            Nostixel does not require an account or ask users for a name, email
+            address, phone number, payment details, location, contacts, or
+            other profile information. In the reviewed release, no
+            app-controlled server, analytics, advertising, authentication, or
+            remote crash-reporting service was identified. The release
+            manifest has no Internet permission. These findings describe the
+            reviewed release and should be checked again if the app or its
+            dependencies change.
+          </p>
+          <p>
+            Nostixel processes files users choose to import and creates local
+            records needed for its features. Local processing is different
+            from the app transmitting that information to a Nostixel server or
+            another company.
+          </p>
+        </section>
+
+        <section class="section" id="device-storage">
+          <h2>4. Information stored on the device</h2>
+          <p>Nostixel stores data in app-private storage, including:</p>
+          <ul>
+            <li>imported ROM files, filenames, file paths, and content hashes;</li>
+            <li>
+              ROM library metadata, including titles, favorites, play time,
+              last-played values, and identifiers used to associate game data
+              with a ROM;
+            </li>
+            <li>cartridge save files, manual save states, and resume save states;</li>
+            <li>user-entered cheat names, codes, and enabled status; and</li>
+            <li>
+              preferences such as video, audio, control, and player settings,
+              including the selected ROM path and identity.
+            </li>
+          </ul>
+          <p>
+            Nostixel uses the app version for display in Settings. No
+            persistent device identifier was found. The application does not
+            implement a separate encryption layer for these local files or its
+            SQLite database; Android&apos;s app sandbox and device protections
+            apply.
+          </p>
+        </section>
+
+        <section class="section" id="rom-files">
+          <h2>5. ROM files and imported content</h2>
+          <p>
+            When a user selects a <code>.gba</code> file or supported ZIP
+            archive, Nostixel copies the selected ROM into its private app
+            storage for gameplay. Nostixel does not provide ROM downloads,
+            bundle game ROMs in the reviewed release, or intentionally upload
+            ROMs to Nostixel servers. Users are responsible for ensuring they
+            have the rights to select and use their files.
+          </p>
+          <p>
+            The Android system file picker can show local and cloud-backed
+            storage providers. If a user browses to and selects a file from a
+            cloud-backed provider, that provider may retrieve or otherwise
+            process the file as part of the user&apos;s selection under that
+            provider&apos;s own terms and privacy policy. This is a
+            user-initiated provider action, not an upload by Nostixel.
+          </p>
+        </section>
+
+        <section class="section" id="saves">
+          <h2>6. Save files and save states</h2>
+          <p>
+            Cartridge save files and emulator save states are stored locally
+            in Nostixel&apos;s app-private support storage and database.
+            Nostixel does not implement cloud save synchronization.
+          </p>
+        </section>
+
+        <section class="section" id="diagnostics">
+          <h2>7. Device and diagnostic information</h2>
+          <p>
+            Nostixel does not request device identifiers or location.
+            Performance instrumentation and error handling can write metrics,
+            exception details, or stack traces to local device logs. Such
+            messages are not sent by Nostixel to a remote diagnostics service.
+            A local error may contain a ROM path or filename; users should
+            avoid posting device logs publicly if they contain personal
+            information.
+          </p>
+        </section>
+
+        <section class="section" id="network">
+          <h2>8. Internet and network communication</h2>
+          <p>
+            The inspected release has no
+            <code>android.permission.INTERNET</code> permission and no
+            app-controlled network request was identified. The debug and
+            profile development manifests include Internet permission for
+            development support; that permission was absent from the inspected
+            release artifact.
+          </p>
+        </section>
+
+        <section class="section" id="backup">
+          <h2>9. Android device backup and transfer</h2>
+          <p>
+            Nostixel is configured to disable Android Auto Backup and exclude
+            app data from supported cloud-backup and device-to-device transfer
+            paths. The Android manifest sets
+            <code>android:allowBackup=&quot;false&quot;</code> and references
+            exclusion rules for supported older Android versions and Android
+            12 and later. Those rules exclude the app&apos;s files, databases,
+            preferences, and other configured app-data domains. The Android
+            12+ rules also configure exclusions for the cross-platform-transfer
+            path on Android versions that support it.
+          </p>
+          <p>
+            Nostixel does not intentionally upload ROMs, save files, save
+            states, cheats, preferences, or other app data to Nostixel servers.
+            These Android settings are not an absolute guarantee for every
+            manufacturer: some OEM device-to-device migration behavior may not
+            honor <code>allowBackup=false</code>, and manufacturer migration
+            tools outside Android&apos;s documented backup-rule system may
+            behave differently. Cross-platform-transfer rules apply only on
+            Android versions that support them. This policy should be reviewed
+            again if the Android configuration or platform behavior changes.
+          </p>
+          <p>
+            Because Nostixel does not back up or transfer app data, users who
+            change devices or reinstall the app will need to import their ROMs
+            again and manually recreate or restore other local data themselves.
+          </p>
+        </section>
+
+        <section class="section" id="third-parties">
+          <h2>10. Third-party libraries and services</h2>
+          <p>
+            Nostixel includes Flutter and open-source packages for navigation,
+            local storage, file selection, audio output, and Android
+            integration. The review did not identify a third-party SDK that
+            sends personal data, analytics, ads, or crash reports. Settings
+            &gt; About includes bundled mGBA and inih license notices and a
+            Flutter/package license page. Android, Flutter, the file-picker
+            integration, and other open-source components may process
+            information locally to provide app features. Android&apos;s system
+            file picker and cloud-backed providers are described above. This
+            review does not replace the independent privacy terms of those
+            platforms or providers.
+          </p>
+        </section>
+
+        <section class="section" id="sharing">
+          <h2>11. Data sharing</h2>
+          <p>
+            Nostixel does not implement an app-controlled data-sharing or
+            upload feature. Nostixel does not intentionally upload ROMs or save
+            data to Nostixel servers. User-initiated selection through an
+            Android document provider is handled as described above. Android
+            backup and supported transfer paths are disabled or excluded,
+            subject to the manufacturer limitations described above. No other
+            app-controlled sharing flow was identified in the reviewed release.
+          </p>
+        </section>
+
+        <section class="section" id="retention">
+          <h2>12. Retention and deletion</h2>
+          <p>
+            Nostixel keeps data in app-private storage until it is removed.
+            Users can delete some save states and cheats in the app, but the
+            reviewed version does not provide an in-app action to delete an
+            imported library ROM or clear all Nostixel data. Users can clear
+            the app&apos;s storage or uninstall it through Android settings;
+            those actions remove Nostixel&apos;s app-private data. They do not
+            delete the original file from a separate local or cloud-backed
+            provider.
+          </p>
+          <p>
+            Nostixel has no app account or developer server-side user record.
+            Android cloud backup and supported device-to-device transfer are
+            disabled or excluded, subject to the platform limitations
+            described above. Nostixel does not provide backup restoration.
+            Users changing devices or reinstalling must import their ROMs again
+            and manually recreate or restore other local data. If the publisher
+            later adds an account or remote data service, this section and the
+            Google Play disclosures must be updated before release.
+          </p>
+        </section>
+
+        <section class="section" id="security">
+          <h2>13. Security</h2>
+          <p>
+            Nostixel stores its data in app-private Android storage. The review
+            found no custom encryption of the local database, imported ROMs,
+            or save files, and this policy does not promise that they are
+            encrypted at rest. Android&apos;s app sandbox and the device&apos;s
+            own security settings apply. Nostixel&apos;s Android backup and
+            transfer exclusions are described above, including their
+            manufacturer limitations. No security measure can be guaranteed
+            to prevent every risk.
+          </p>
+        </section>
+
+        <section class="section" id="children">
+          <h2>14. Children&apos;s privacy</h2>
+          <p class="unresolved">
+            [UNRESOLVED: The publisher must confirm Nostixel&apos;s intended
+            target age group and replace this section with an accurate
+            statement. No determination has been made whether Nostixel is
+            directed to or used by children. If children are included in the
+            target audience, review the applicable Google Play Families
+            requirements and privacy laws before publication.]
+          </p>
+        </section>
+
+        <section class="section" id="rights">
+          <h2>15. User rights and privacy questions</h2>
+          <p>
+            Privacy rights vary by location. Contact
+            <a href="mailto:sergrudolfarago@gmail.com">sergrudolfarago@gmail.com</a>
+            with questions about this policy. Because the audited app stores
+            data locally and has no server-side account system, users can
+            remove local app data using the Android settings controls
+            described above. This policy does not promise rights or outcomes
+            beyond those required by applicable law.
+          </p>
+        </section>
+
+        <section class="section" id="changes">
+          <h2>16. Changes to this policy</h2>
+          <p>
+            The publisher may update this policy when Nostixel&apos;s behavior
+            or applicable requirements change. The publisher will update the
+            effective date and make the current version available at the public
+            policy URL.
+          </p>
+        </section>
+
+        <section class="section" id="contact">
+          <h2>17. Contact</h2>
+          <ul>
+            <li>Sergrudolf Arago</li>
+            <li>
+              Privacy contact:
+              <a href="mailto:sergrudolfarago@gmail.com">sergrudolfarago@gmail.com</a>
+            </li>
+            <li>Address, if required: [PUBLISHER MAILING ADDRESS]</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        Nostixel for Android. This policy remains a draft until its marked
+        publication details and target-age statement are completed.
+      </div>
+    </footer>
+  </body>
+</html>
